@@ -1,0 +1,29 @@
+get http://localhost:5079/games
+
+###
+get http://localhost:5079/games/3
+
+###
+Post http://localhost:5079/games
+Content-Type: application/json
+
+{
+    "name": "Final Fantasy XIV",
+    "genreId": 2,
+    "price":19.99,
+    "releaseDate": "2010-11-18"
+}
+
+###
+PUT http://localhost:5079/games/3
+Content-Type: application/json
+
+{
+  "name": "Street Fighter II Turbo",
+  "genreId": 1,
+  "price": 13.99,
+  "releaseDate": "1991-07-05"
+}
+
+###
+DELETE  http://localhost:5079/games/2
